@@ -1,0 +1,240 @@
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git checkout -b feature/us116
+Switched to a new branch 'feature/us116'
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git status
+On branch feature/us116
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git add src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.ts
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git commit -m "6th bis"
+[feature/us116 36fabe8] 6th bis
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git fetch origin
+ofiigit@10.170.23.196's password:
+Permission denied, please try again.
+ofiigit@10.170.23.196's password:
+Could not chdir to home directory /home/ofiigit: No such file or directory
+remote: Counting objects: 163, done.
+remote: Compressing objects: 100% (98/98), done.
+remote: Total 99 (delta 78), reused 0 (delta 0)
+Unpacking objects: 100% (99/99), done.
+From ssh://10.170.23.196/data/git-repo/ofii-gda-frontend
+   5843e67..a04baf2  master     -> origin/master
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 8 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git reset --hard origin/master
+HEAD is now at a04baf2 add pipe memberCategory
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git checkout feature/us116
+Switched to branch 'feature/us116'
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git rebase -i master feature/us116
+error: could not apply 700f61d... 6th commit for family composition with validate composition onClick
+
+When you have resolved this problem, run "git rebase --continue".
+If you prefer to skip this patch, run "git rebase --skip" instead.
+To check out the original branch and stop rebasing, run "git rebase --abort".
+
+Could not apply 700f61d... 6th commit for family composition with validate composition onClick
+Auto-merging src/app/family-workflow/family-workflow.module.ts
+CONFLICT (content): Merge conflict in src/app/family-workflow/family-workflow.module.ts
+Auto-merging src/app/family-workflow/family-workflow-tabs/family-workflow-tabs.component.html
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116|REBASE-i 1/2)
+$ git status
+interactive rebase in progress; onto a04baf2
+Last command done (1 command done):
+   pick 700f61d 6th commit for family composition with validate composition onClick
+Next command to do (1 remaining command):
+   pick 36fabe8 6th bis
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'feature/us116' on 'a04baf2'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.css
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.html
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.ts
+        modified:   src/app/family-workflow/family-workflow-tabs/family-workflow-tabs.component.html
+        modified:   src/app/family-workflow/family-workflow-tabs/family-workflow-tabs.component.ts
+        modified:   src/app/services/family-composition-services/family-composition.service.ts
+
+Unmerged paths:
+  (use "git reset HEAD <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   src/app/family-workflow/family-workflow.module.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116|REBASE-i 1/2)
+$ git add src/app/family-workflow/family-workflow.module.ts
+
+
+
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116|REBASE-i 1/2)
+$ git status
+interactive rebase in progress; onto a04baf2
+Last command done (1 command done):
+   pick 700f61d 6th commit for family composition with validate composition onClick
+Next command to do (1 remaining command):
+   pick 36fabe8 6th bis
+  (use "git rebase --edit-todo" to view and edit)
+You are currently rebasing branch 'feature/us116' on 'a04baf2'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.css
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.html
+        modified:   src/app/family-workflow/family-workflow-composition/family-workflow-composition.component.ts
+        modified:   src/app/family-workflow/family-workflow-tabs/family-workflow-tabs.component.html
+        modified:   src/app/family-workflow/family-workflow-tabs/family-workflow-tabs.component.ts
+        modified:   src/app/family-workflow/family-workflow.module.ts
+        modified:   src/app/services/family-composition-services/family-composition.service.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116|REBASE-i 1/2)
+$ git rebase --continue
+[detached HEAD 915518f] 6th commit for family composition with validate composition onClick
+ 7 files changed, 97 insertions(+), 24 deletions(-)
+Successfully rebased and updated refs/heads/feature/us116.
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git status
+On branch feature/us116
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git log
+
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (feature/us116)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git merge feature/us116
+Updating a04baf2..7cca081
+Fast-forward
+ .../family-workflow-composition.component.css      |  2 +-
+ .../family-workflow-composition.component.html     | 20 ++++++--
+ .../family-workflow-composition.component.ts       | 56 +++++++++++++++++-----
+ .../family-workflow-tabs.component.html            |  2 +-
+ .../family-workflow-tabs.component.ts              |  6 +++
+ src/app/family-workflow/family-workflow.module.ts  |  3 +-
+ .../family-composition.service.ts                  | 32 ++++++++++---
+ 7 files changed, 97 insertions(+), 24 deletions(-)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git push origin master
+ofiigit@10.170.23.196's password:
+Could not chdir to home directory /home/ofiigit: No such file or directory
+Counting objects: 23, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (23/23), 4.95 KiB | 0 bytes/s, done.
+Total 23 (delta 19), reused 0 (delta 0)
+To ssh://10.170.23.196/data/git-repo/ofii-gda-frontend.git
+   a04baf2..7cca081  master -> master
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        dist/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+MND15281@PAR1DSK0413 MINGW64 /c/java/workspace/ofii-gda-frontend (master)
+$

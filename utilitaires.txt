@@ -1,0 +1,327 @@
+Base de donnéées:
+
+spring.datasource.url=jdbc:postgresql://sp1d.teamlog.intra:5432/ofii-dna-db3
+spring.datasource.username=ofii-dev
+spring.datasource.password=$Ofiidev
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+git repos :
+url : ssh://ofiigit@10.170.23.196/data/git-repo/ofii-xxx.git
+login = ofiigit
+pass  = $bar:78! 
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+L'écran de visualisation des jobs est opérationnel. N'oubliez pas de l'activer dès le début de journée : 
+compte windows : CDS/Open2017
+Accès Jenkins : http://dc2s.teamlog.intra
+login = ofii-reader
+pass = $OpenOffice2017 ==> Open2017!
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+1 - IMPORTANT Toutes modifications de signature d'API REST, nécessiter la génération d'un client pour que tout soit en phase
+2 - Je démarre mon serveur et j'accède à la représetation JSOn de la spec (localhost:8080/v2/api-docs)
+3 - Je mets à jour le fichier src/main/resources/api-docs/swagger-api.json (copier/coller du contenu de la page obtenu au point 2) et j'enregistre. 
+Considérer ce fichier comme faisant partie intégrante du code source, au même titre que des sql, ou autres objets ..;
+4 - Dans un terminal placer vous sur le répertoire du front (par exemple ofii-usr-front)
+5 - Lancer la commande mvn clean package -Pclient-gen
+6 - Placer vous dans target/generated-sources/ofii-usr-client (usr est un exemple)
+7 - Lancer la commande mvn clean install
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+
+4 - Dans un terminal placer vous sur le répertoire du front (par exemple ofii-usr-front)
+5 - Lancer la commande : mvn clean package -Pclient-gen
+6 - Placer vous dans : target/generated-sources/ofii-usr-client (usr est un exemple)
+7 - Lancer la commande : mvn clean install
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+wda integration:
+
+http://sp1d.teamlog.intra:8096/services/getDonneePortailService
+
+swagger-ui integration
+
+http://sp1d.teamlog.intra:8106/swagger-ui.html
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+UPDATE individu 
+SET pays_naissance=21, nom_naissance='Ouroukou', lieu_naissance = 'Mopti',langue1=12, sexe='M', prenom = 'Mamadou', nom='Ouroukou', email='mamadou.ouroukou@gmail.fr',
+numero_telephone='0605040302', code_Matrimonial='VEU', code_Demandeur_type='PRI', langue2=3 
+WHERE id =4
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+UPDATE individu 
+SET pays_naissance=21,langue1=12, sexe='M', email='mohamedaboubacar@gmail.com',
+numero_telephone='0605040301', code_Matrimonial='CEL', code_Demandeur_type='PRI', langue2=2, nom_naissance='ABOUBACAR'
+WHERE id =10
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+soap integration
+
+http://sp1d.teamlog.intra:8096/services/getDonneePortailService
+
+SOAP LOCAL
+http://localhost:8080/services/getDonneePortailService
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+Sprint 2 : US 61 (tache 22 & 23)
+
+0 ==> Création d'une demande d'asile temporaire pour une  famille (  status_procedure=0)   createAsylumStrategy.java
+1 ==> Validation d'une demande d'asile déja crée (status_procedure=1) ValidateAsylumStrategy.java
+99==> Demande purge (aucun purge n'est implémenté)  (status_procedure=99) PurgeAsylumStrategy.java
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+4 - Dans un terminal placer vous sur le répertoire du front (par exemple ofii-usr-front)
+5 - Lancer la commande mvn clean package -Pclient-gen
+6 - Placer vous dans target/generated-sources/ofii-usr-client (usr est un exemple)
+7 - Lancer la commande mvn clean install
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+ALTER TABLE table_name
+DROP COLUMN column_name;
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+DROP TABLE document_administrative;
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+users internes
+
+{
+  "login": "USR00010",
+  "organization": "OFII_INT",
+  "password": "$usr:00010"
+}
+
+
+{
+  "login": "USR00004",
+  "organization": "OFII_INT",
+  "password": "$usr:00011"
+}
+
+users externes
+
+{
+  "login": "USR00002",
+  "organization": "OFII_EXT",
+  "password": "U@sr00001234"
+}
+NB : 'crypter le mot de passe en SHA'  {sha}UmaPMySWfxL7uRI0wtSK/9XxVBA=     {sha}tqUCQvTO/odhycX6OmQ5JmfbVF8=
+
+{
+  "login": "USR00001",
+  "organization": "OFII_EXT",
+  "password": "$usr:00001"
+}
+
+// valide users externes
+{
+  "login": "USR00000",
+  "organization": "OFII_EXT",
+  "password": "B2abcdef????" || "Ab?0123456789"
+}
+
+// usr : USR00000 pwd : U@sr00001234
+
+
+{
+  "login": "USR00100",
+  "organization": "OFII_EXT",
+  "password": AnasOfiiOpen2018&
+}
+
+// usr : USR00100 pwd : AnasOfiiOpen2018&
+
+
+http://dc2s.teamlog.intra/squirrelmail
+
+ya un compte de créé
+usr00000
+$usr:00000
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+regex: 
+
+var p = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{12,}/;
+
+
+WScript.echo( (p.test("A@1rtyuiopqs") ? "ok" : "ko") );
+WScript.echo( (p.test("Aa1rtyuiopqs") ? "ok" : "ko") );
+WScript.echo( (p.test("123") ? "ok" : "ko") );
+WScript.echo( (p.test("azerty") ? "ok" : "ko") );
+
+/********************************-------------------------------------------------------***************************/
+
+// adresse IP public 
+LOGGER.info("User " + domainUser.getIdentifier() + " is successfully connected"+" @IP v6 >>> "+request.getRemoteHost());
+String url = "http://localhost:4200/#/update-password/:" + token;
+//
+
+ http://sp1d.teamlog.intra:8106api-public/change-password?token=eyJhbGciOiJIUzI1NiJ9.eyJ4cm8iOltdLCJsb2ciOiJVU1IwMDAwMiJ9.vBhZaGA92Z3GI4XB246-aNyX3C_l5Gc469eCgpPndmg&oldPasseword=U@sr00001234&newPasseword=U@sr00001234
+ 
+ http://sp1d.teamlog.intra:8106/api-public/change-password?token=eyJhbGciOiJIUzI1NiJ9.eyJ4cm8iOltdLCJsb2ciOiJVU1IwMDAwMiJ9.vBhZaGA92Z3GI4XB246-aNyX3C_l5Gc469eCgpPndmg&oldPasseword=U%40sr00001234&newPasseword=U%40sr00001234
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ #-----------------------------------------------------------------------------------------------------
+# mail params for message and  update password url
+#-----------------------------------------------------------------------------------------------------
+String body = "Bonjour, \n"
+                            +"Nous avons reçu une demande de réinitialisation du mot de passe associé à l'identifiant " 
+                            + userId+".\n"
+                            + "Si vous êtes à l'origine de cette demande, veuillez cliquez sur le lien ci-dessous : "
+                            + url
+                            +"\nCordialement,\n\nL''équipe DNA2";
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ for(const i in data){
+          console.log(i);
+          
+        }
+
+        for(const item of data){
+          console.log(item);
+          
+        }
+		
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+perimetre_utilisateur_centre (identifiant, profil, id_centre) values (?, ?, ?)
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+security.ad.ldapUrl=ldap://sp2d.teamlog.intra:389
+security.ad.ldapLogin=SP2\\sp2dadcnx
+security.ad.ldapPassword=$lm4589
+security.ad.userSearchBase=OU=users,OU=ofii,OU=open,DC=SP2,DC=TEST
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<dependency>
+            <groupId>fr.ofii.qms</groupId>
+            <artifactId>ofii-qms-front-client</artifactId>
+            <version>${ofii.dependencies.version}</version>
+</dependency>
+
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+
+Date input = new Date();
+LocalDate date = input.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+LocalDate localDate = LocalDate.now();//For reference
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLLL yyyy");
+String formattedString = localDate.format(formatter);
+
+
+DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
+
+	String date = "16/08/2016";
+	
+	//convert String to LocalDate
+	LocalDate localDate = LocalDate.parse(date, formatter);
+	
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+Create a new branch:
+git checkout -b feature_branch_name
+Edit, add and commit your files.
+Push your branch to the remote repository:
+git push -u origin feature_branch_name
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+public static final String BASE_FORMAT = "YYYY-MM-DDThh:mm:ss.sTZD";
+
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+	console.log('#---------------today.getTime()--------------#',today.getTime()/1000|0);
+    console.log('#---------------beginingDate.getTime()--------------#',beginingDate.getTime()/1000|0);
+    console.log('#---------------beginingDate.getTime() < today.getTime()--------------#',((beginingDate.getTime()/1000)|0) < ((today.getTime()/1000)|0));
+#-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
+AUCUN PARAMETRE DETECTE
+
+Liste des commandes disponibles
+---------------------------------------------------------------------
+aspCronJob:
+   Lancement de tous les jobs ASP Quotidien/Nominal Cron en flux sortant et entrant
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspCronJob"
+   parametres: aucun
+
+---------------------------------------------------------------------
+aspInputDailyJob:
+   Lance l'integration des retours ASP Quotidiens sans CRON
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspInputDailyJob"
+   parametres:
+      cron=true  Optionnel, lance le job en mode cron selon la property asp.compute.inputDailyJob.cron
+
+---------------------------------------------------------------------
+aspOutputDailyJob:
+   Génération des flux ASP quoditdiens ASP
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspOutputDailyJob"
+   parametres:
+      cron=true  Optionnel, lance le job en mode cron selon la property asp.compute.outputDailyJob.cron
+
+---------------------------------------------------------------------
+aspInputNominalJob:
+   Integration des retours ASP Nominaux
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspInputNominalJob"
+   parametres:
+      cron=true  Optionnel, lance le job en mode cron selon la property asp.compute.inputNominalJob.cron
+
+---------------------------------------------------------------------
+aspOutputNominalJob:
+   Génération des flux ASP nominaux ASP
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspOutputNominalJob"
+   parametres:
+      cron=true  Optionnel, lance le job en mode cron selon la property asp.compute.outputNominalJob.cron
+
+---------------------------------------------------------------------
+aspOutputExceptionalJob:
+   Génération des flux ASP exceptionnel ASP
+
+   usage     : mvn spring-boot:run -Drun.arguments="aspOutputExceptionalJob"
+   parametres: aucun
+
+---------------------------------------------------------------------
+ADAComputingJob:
+   Calcul ADA
+
+   usage     : mvn spring-boot:run -Drun.arguments="ADAComputingJob"
+   parametres: aucun
+
+---------------------------------------------------------------------
+ADARecoveryJob:
+   Recouvrement ADA
+
+   usage     : mvn spring-boot:run -Drun.arguments="ADARecoveryJob month=xx year =xxxx"
+   parametres:
+      month: Obligatoire mois de traitement
+      year : Obligatoire année de traitement
+
+---------------------------------------------------------------------
+particularCasesJob:
+   Traitement des cas particuliers
+
+   usage     : mvn spring-boot:run -Drun.arguments="particularCasesJob"
+   parametres: aucun
+
+---------------------------------------------------------------------
+particularCasesJob:
+   Traitement des cas particuliers
+
+   usage     : mvn spring-boot:run -Drun.arguments="particularCasesJob"
+   parametres: aucun
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------#
+ "login": "ADA.DGEF",
+  "password": "Opencds2018!"
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------#  
+<dependency>             
+  <groupId>org.springframework.boot</groupId>             
+  <artifactId>spring-boot-starter-security</artifactId>       
+</dependency>
+
+@PreAuthorize("hasRole('ROLE_USER')")
+public interface ParkrunCourseRepository extends CrudRepository<ParkrunCourse, Long> {
+	@Override
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	ParkrunCourse save(ParkrunCourse parkrunCourse);
+}
+
+#------------------------------------------------------------------------------------------------------------------------------------------------------------------#  

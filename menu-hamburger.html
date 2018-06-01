@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+		
+		<form role="form" method="POST"> 
+		  <div class="form-group has-feedback">
+			<input type="text" class="form-control" placeholder="RECHERCHER PAR AGDREF OU NOM" name="search"/>
+			<span class="form-control-feedback glyphicon glyphicon-search"></span>
+		  </div>
+		</form>
+    </div>
+  </nav>
+</div>
+	<script type="text/javascript">
+		function mafunction() {
+		var search = document.getElementById("search").value;
+			console.log("Bonjour" +search);
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+<!-- <nav class="sidenav">
+      
+      <a href="#"  >
+              {{ 'TABLEAU DE BORD' }}
+          </a>
+          <a href="#"  >
+              {{ 'HEBERGEMENT' }}
+          </a>
+          <a href="#"  >
+              {{ 'CAS PARTICULIERS' }}
+          </a>
+          <a href="#"  >
+              {{ 'AUTRES PUBLICS' }}
+          </a>
+          <a href="#"  >
+              {{ 'CONTENTIEUX' }}
+          </a>
+          <a href="#"  >
+              {{ 'CREATION DE FF' }}
+          </a>
+  </nav> -->
